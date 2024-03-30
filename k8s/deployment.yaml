@@ -1,0 +1,45 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ysw-deploy-blue
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      color: blue  # "1"
+  # 아래내용은 Pod 에 대한 구성내용
+  template:
+    metadata:
+      name: ysw-pod-blue
+      labels:
+        color: blue  # 반드시 "1" 과 동일해야 함
+    spec:
+      containers:
+        - name: ysw-ctn-blue
+          image: chris4929/cicdtest:blue
+          ports:
+            - containerPort: 80
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ysw-deploy-green
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      color: green  # "1"
+  # 아래내용은 Pod 에 대한 구성내용
+  template:
+    metadata:
+      name: ysw-pod-green
+      labels:
+        color: green  # 반드시 "1" 과 동일해야 함
+    spec:
+      containers:
+        - name: ysw-ctn-green
+          image: chris4929/cicdtest:green
+          ports:
+            - containerPort: 80
+---
