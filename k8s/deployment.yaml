@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: ysw-deploy-blue
 spec:
-  replicas: 5
+  replicas: 3
   selector:
     matchLabels:
       color: blue  # "1"
@@ -26,7 +26,7 @@ kind: Deployment
 metadata:
   name: ysw-deploy-green
 spec:
-  replicas: 5
+  replicas: 3
   selector:
     matchLabels:
       color: green  # "1"
