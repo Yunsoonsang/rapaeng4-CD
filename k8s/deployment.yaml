@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: ysw-ctn-blue
-          image: andrewyss/prod:1.0.3
+          image: andrewyss/prod:1.0.2
           ports:
             - containerPort: 80
 ---
@@ -39,7 +39,7 @@ spec:
     spec:
       containers:
         - name: ysw-ctn-green
-          image: chris4929/cicdtest:green
+          image: andrewyss/prod:1.0.3
           ports:
             - containerPort: 80
 ---
