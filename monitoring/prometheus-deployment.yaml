@@ -14,7 +14,7 @@ spec:
         app: prometheus-server
     spec: 
       nodeSelector: 
-        kubernetes.io/hostname: "node3"
+        kubernetes.io/hostname: "node1"
       containers:
         - name: prometheus
           image: prom/prometheus:latest
